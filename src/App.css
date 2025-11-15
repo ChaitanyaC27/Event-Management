@@ -1,0 +1,192 @@
+/* src/components/Homepage.css */
+
+/* Hero Section / Carousel styles */
+.hero-section {
+    position: relative;
+    height: 600px; /* Adjust height as needed */
+    overflow: hidden; /* Ensures images don't overflow */
+    /* Add a top margin if your navbar is fixed, e.g., margin-top: 56px; */
+}
+
+.carousel-item img {
+    height: 600px; /* Ensure images fill the carousel height */
+    object-fit: cover; /* This makes images cover the area without distorting */
+    filter: brightness(60%); /* Darken images slightly for text readability */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background for text */
+    padding: 20px 30px;
+    border-radius: 8px;
+    bottom: 20%; /* Adjust vertical position */
+    left: 10%;
+    right: 10%;
+    max-width: 80%; /* Limit width of the caption box */
+    margin: auto; /* Center the caption box */
+}
+
+.carousel-caption h1,
+.carousel-caption p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Text shadow for better readability on images */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Book Now Button Styling */
+.book-now-btn {
+    border-radius: 50px; /* Pill-shaped button */
+    padding: 12px 30px; /* More padding */
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+.book-now-btn:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: Styling for other sections */
+.card {
+    border: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-body i {
+    font-size: 3.5rem; /* Larger icons */
+    color: #007bff; /* Primary color for icons */
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section video {
+  filter: brightness(65%) blur(1px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  background-color: #ffb100;
+  transform: scale(1.05);
+}
+
+        .soft-hover:hover {
+          color: #ffc107 !important;
+          text-shadow: 0 0 6px rgba(255, 193, 7, 0.5);
+        }
+
+        .active-link {
+          position: relative;
+        }
+
+        .active-link::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 35%;
+          height: 2px;
+          background-color: #ffc107;
+          border-radius: 1px;
+          opacity: 0.8;
+        }
+
+        .soft-glow {
+          box-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+          transition: all 0.3s ease;
+        }
+
+        .soft-glow:hover {
+          box-shadow: 0 0 18px rgba(255, 193, 7, 0.5);
+          transform: translateY(-1px);
+        }
+
+        .navbar-brand:hover {
+          text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+      
+
+        .social-icon {
+          transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+          transform: scale(1.2);
+          color: #ffc107 !important;
+          text-shadow: 0 0 10px rgba(255, 193, 7, 0.7);
+        }
+
+        .glow-btn {
+            box-shadow: 0 0 15px rgba(255,193,7,0.5);
+            transition: all 0.3s ease;
+          }
+          .glow-btn:hover {
+            box-shadow: 0 0 30px rgba(255,193,7,0.8);
+            transform: translateY(-3px);
+          }
+
+           .hover-bounce:hover {
+                transform: scale(1.05);
+                transition: all 0.3s ease;
+              }
+              .glow-btn {
+                box-shadow: 0 0 15px rgba(255,193,7,0.5);
+                transition: all 0.3s ease;
+              }
+              .glow-btn:hover {
+                box-shadow: 0 0 25px rgba(255,193,7,0.8);
+                transform: translateY(-2px);
+              }
+
+              .parallax-section {
+  /* This ensures the ::before element is positioned relative to this section */
+  position: relative;
+  overflow: hidden; /* Recommended to prevent any overflow issues */
+}
+
+.parallax-section::before {
+  content: "";
+  position: fixed; /* Fixes it to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Use the variable we passed from the JSX style prop */
+  background-image: var(--bg-image); 
+  
+  background-size: cover;
+  background-position: center;
+  
+  /* Place it behind the section's content.
+    The section's <div> with bg-opacity-75 will sit on top of this.
+  */
+  z-index: -1; 
+  
+  /* Optional but recommended performance boost */
+  transform: translateZ(0);
+}
+
+/* --- Optional Hover Effect CSS --- */
+/* This is the hover effect you had in your inline styles */
+.hover-bounce:hover {
+  transform: translateY(-10px);
+}
